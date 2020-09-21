@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+        integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <link rel="stylesheet" href="./first.css">
+    <script src="./first.js"></script>
+    <title>2018 eamcet cuttoff</title>
+</head>
+
+<body>
+    <div class="container-fluid"id="main_tab">
+
+        <a href="index.html" style="font-size:13px;">Home</a>
+        <a href="index_1.html" style="font-size:13px;">Codes_and_Names</a>
+    </div>
+        <div class="container-fluid" style="text-align:center;color:rgb(69, 206, 172);font-size:1.0em;">
+    You can leave fields empty except gender and caste to list everything
+        </div>
+
+    <div class="container-fluid" id="tab">
+        <form >
+
+            <label for="Inst Code">Inst Code<br><input id="collegeid" type="text"placeholder="bvri,cbit"></label>
+            <label for="Dist Code">Dist Code<br><input id="place" type="text" placeholder="hyd,nzb"></label>
+            <label for="Branch">Branch Code<br><input id="course"type="text"  placeholder="cse,ece"></label>
+            <label for="Caste">Caste<br><input id="caste" type="text" placeholder="bc-d"></label>
+            <label for="Boys" ><input id="boys" type="radio" name="gender" value="Boys">&nbsp;Boy</label>
+            <label for="Girls" ><input  id="girls" type="radio" name="gender" value="Girls">&nbsp;Girl</label>
+        </form>
+        <button onclick="sortion()">Submit</button>
+</div>
+<div id="main" class="container-fluid">
+<table class="content-table">
+    <thead >
+            <tr >
+            <th>Inst_Code</th>
+            <th> Inst_Name </th>
+            <th> Place</th>
+            <th> Dist_Code</th>
+            <th> COED/Girls </th>
+            <th> College_Type </th>
+            <th> Branch_Code </th>
+            <th> Branch_Name</th>
+            <th> Caste </th>
+            <th> Cutoff </th>
+            <th> Affiliation</th>
+            </tr>
+        </thead>
+        <tbody id="tablebody">
+            
+        </tbody>
+        
+    </table>
+</div>
+
+</body>
+
+</html>
