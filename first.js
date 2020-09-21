@@ -869,9 +869,26 @@ function sortion(){
           instcodes = ['KUCP', 'SAIS', 'MDRK', 'MTEC', 'VGWL', 'IITT', 'LAQS', 'SRYS', 'GCTC', 'CVSR', 'GLOB', 'MRET', 'VVKN', 'AVHP', 'CDTK', 'KMIT', 'MHVR', 'VITH', 'SRIW', 'JNTS', 'VJIT', 'INDU', 'ACEG', 'ANRP', 'GRCP', 'TKRP', 'BVRW', 'TKRC', 'MLRD', 'GPRP', 'WITS', 'SMPS', 'AKIT', 'SIEI', 'ASOK', 'NRCM', 'CHET', 'MINA', 'GRRR', 'KGRH', 'KNRR', 'NIET', 'SCTP', 'VBIT', 'AARM', 'STLW', 'BITN', 'VREC', 'VSNU', 'MRCE', 'CCRP', 'CBIT', 'KTKM', 'NAGL', 'TPCE', 'SISG', 'PETW', 'DRKC', 'BRWN', 'SPHN', 'AURH', 'JNTM', 'SMSK', 'JBIT', 'CMRN', 'VGSE', 'RBVW', 'VGNT', 'TCTK', 'RITW', 'KMTS', 'MRCP', 'VITS', 'PLMU', 'NSHT', 'SWIT', 'BSGP', 'KUEWSF', 'AVIH', 'KUWL', 'BSKR', 'VCOP', 'CFSR', 'HITM', 'MNRT', 'AURC', 'INDI', 'SDGI', 'VJYA', 'AHTC', 'KITW', 'KLRT', 'SVSE', 'SRTI', 'BRIG', 'ELEN', 'CITS', 'SVIT', 'BIET', 'TRPM', 'GNTW', 'MECS', 'JMTS', 'BOMA', 'AVNI', 'SSRP', 'JNTHMT', 'JNPASF', 'VAGE', 'CHTN', 'DHRU', 'PRIN', 'NREC', 'ELET', 'SDEW', 'BNPW', 'JNTHMB', 'CVRH', 'MGUNSF', 'METH', 'NNRG', 'SKEC', 'MLIP', 'JNKR', 'SAJW', 'ASRA', 'BRIL', 'CASR', 'NGIT', 'SRIT', 'SNIS', 'SVHU', 'CMRM', 'VAGP', 'BOSE', 'JAYA', 'JOGI', 'CFSP', 'KCEA', 'MLRS', 'PRIW', 'VJEC', 'CMRG', 'AITH', 'JMTK', 'OUCT', 'TRML', 'TUDI', 'MREM', 'KITS', 'ANRK', 'VMEG', 'SVES', 'GURU', 'HOLY', 'GNPT', 'MRIT', 'CMRK', 'BREW', 'AURP', 'KDDW', 'MVSR', 'BVRI', 'ARJN', 'GNIT', 'CFSB', 'SRHP', 'JIET', 'KUCE', 'GTEN', 'MOTK', 'CMRP', 'DVRC', 'MLID', 'MLTM', 'MRCW', 'OUCE', 'TCEK', 'SPEC', 'TKEM', 'KPRT', 'SNTI', 'VMTW', 'CHTS', 'MGIT', 'TMLP', 'MRPC', 'JPNE', 'IARE', 'JNTH', 'KUCESF', 'DNVP', 'NGMA', 'SANA', 'ANRH', 'MRTN', 'DRKI', 'MREW', 'SBIT', 'MREC', 'MGHA', 'VCET', 'SDES', 'VASV'];
      }
 
-     // val.sort(function(a,b){return(Number(a[ranks[key]]-b[ranks[key]]))})
-     let i=0,j=0;
-if(key!=-1){
+     if(key!=-1){
+          function Magic(a,b){
+               let ranks = { "OC BOYS": 8, "OC GIRLS": 9, "BC-A BOYS": 10, "BC-A GIRLS": 11, "BC-B BOYS": 12, "BC-B GIRLS": 13, "BC-C BOYS": 14, "BC-C GIRLS": 15, "BC-D BOYS": 16, "BC-D GIRLS": 17, "BC-E BOYS": 18, "BC-E GIRLS": 19, "SC BOYS": 20, "SC GIRLS": 21, "ST BOYS": 22, "ST GIRLS": 23 };               
+               let caste = document.getElementById("caste")
+               key = caste.value.toUpperCase() + " GIRLS";
+               return (Number(a[ranks[key]] - b[ranks[key]]));
+          }
+          function Magic_1(a, b) {
+               let ranks = { "OC BOYS": 8, "OC GIRLS": 9, "BC-A BOYS": 10, "BC-A GIRLS": 11, "BC-B BOYS": 12, "BC-B GIRLS": 13, "BC-C BOYS": 14, "BC-C GIRLS": 15, "BC-D BOYS": 16, "BC-D GIRLS": 17, "BC-E BOYS": 18, "BC-E GIRLS": 19, "SC BOYS": 20, "SC GIRLS": 21, "ST BOYS": 22, "ST GIRLS": 23 };
+               let caste = document.getElementById("caste")
+               key = caste.value.toUpperCase() + " BOYS";
+               return (Number(a[ranks[key]] - b[ranks[key]]));
+          }
+          if(key.split(" ")[1]=="GIRLS"){
+          val.sort(Magic);
+     }
+          else{
+               val.sort(Magic_1);
+          }
+          let i=0,j=0;
      var key_1=-1;
      for(i=0;i<830;i++){
 
