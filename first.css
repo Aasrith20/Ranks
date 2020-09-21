@@ -2,7 +2,8 @@
 #main{
   display:flex;
   align-items:center;
-  justify-content:center;
+  /* justify-content:center; */
+  /* overflow:auto; */
   /* position:relative; */
   /* background-color: red; */
 }
@@ -13,6 +14,8 @@
   border-radius: 5px 5px 0 0  ;
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
   text-align:center;
+  overflow-x:auto;
+
 }
 
 .content-table thead  {
