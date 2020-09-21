@@ -833,7 +833,7 @@ function sortion(){
      let ranks = {"OC BOYS": 8, "OC GIRLS": 9, "BC-A BOYS": 10, "BC-A GIRLS": 11, "BC-B BOYS": 12, "BC-B GIRLS": 13, "BC-C BOYS": 14, "BC-C GIRLS": 15, "BC-D BOYS": 16, "BC-D GIRLS": 17, "BC-E BOYS": 18, "BC-E GIRLS": 19, "SC BOYS": 20, "SC GIRLS": 21, "ST BOYS": 22, "ST GIRLS": 23}
      let real=[0,1,2,3,4,5,6,7,0,0,25];
      let key=-1;
-
+     let dummy = ['OC BOYS', 'OC GIRLS', 'BC-A BOYS', 'BC-A GIRLS', 'BC-B BOYS', 'BC-B GIRLS', 'BC-C BOYS', 'BC-C GIRLS', 'BC-D BOYS', 'BC-D GIRLS', 'BC-E BOYS', 'BC-E GIRLS', 'SC BOYS', 'SC GIRLS', 'ST BOYS', 'ST GIRLS'];
      if (document.getElementById("boys").checked && document.getElementById("caste").value.split(",")[0] != ""){
 
           let caste = document.getElementById("caste");
@@ -849,11 +849,11 @@ function sortion(){
           real[9] = ranks[key];
      }
      else{
-               alert("Fill the cast field and opt your gender");
+          alert("Fill the cast field and opt your gender");
      }
-     if (document.getElementById("caste").value.split(",").length!=1){
-          alert("Check your cast field it  must have only one value and no commas \',\'");
+     if(dummy.includes(key)==false && key!=-1){
           key=-1;
+          alert("Enter correct formatted caste such as bc-d (or) oc (or) sc");
      }
      // console.log(document.getElementById("caste").value.split(",").length)
      var branchcodes=document.getElementById("course").value.toUpperCase().split(",")
@@ -872,17 +872,18 @@ function sortion(){
      // val.sort(function(a,b){return(Number(a[ranks[key]]-b[ranks[key]]))})
      let i=0,j=0;
 if(key!=-1){
-     for(j=0;j<830;j++){
+     var key_1=-1;
+     for(i=0;i<830;i++){
 
-               if((val[j][ranks[key]]!=-1 && val[j][ranks[key]]!="NA") && (branchcodes.includes(val[j][6]) && distcodes.includes(val[j][3])) && (instcodes.includes(val[j][0])) ){
+               if((val[i][ranks[key]]!=-1 && val[i][ranks[key]]!="NA") && (branchcodes.includes(val[i][6]) && distcodes.includes(val[i][3])) && (instcodes.includes(val[i][0])) ){
 
                     let table_row=document.createElement("tr");
                     document.getElementById("tablebody").appendChild(table_row);
 
-                    for(i=0;i<11;i++){
+                    for(j=0;j<11;j++){
                          let table_data=document.createElement("td");
-                              if(i!=8){
-                              table_data.textContent=val[j][real[i]];
+                              if(j!=8){
+                              table_data.textContent=val[i][real[j]];
                          }
                          else{
                               table_data.textContent=caste.value.toUpperCase();
@@ -890,10 +891,14 @@ if(key!=-1){
                               table_row.appendChild(table_data);
 
                          }
-                    console.log(key);
+                         key_1=0;
+                         
                     
                     }
           }
+    }
+    if(key_1==-1){
+         alert("check your inputs properly");
     }
     console.log(real)
 }

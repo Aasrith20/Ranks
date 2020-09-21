@@ -44,8 +44,8 @@ button{
   color:black;
   background-color:rgb(255, 253, 253);
   opacity:0.9;
-  box-shadow:1px 1px 1px solid black;
-  border:1px solid grey;
+  box-shadow:0.5px 0.5px 1px 1px rgb(69, 206, 172);;
+  border:1px solid rgb(69, 206, 172);;
   /* margin-top:23px; */
   margin-left:40%;
 }
