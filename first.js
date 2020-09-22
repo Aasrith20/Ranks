@@ -915,7 +915,7 @@ function sortion(){
           }
     }
     if(key_1==-1){
-         alert("check your inputs properly");
+         alert("No data found according to your formatted input");
     }
     console.log(real)
 }
