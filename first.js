@@ -859,8 +859,8 @@ function sortion(){
      var branchcodes=document.getElementById("course").value.toUpperCase().split(",")
      var distcodes = document.getElementById("place").value.toUpperCase().split(",")
      var instcodes = document.getElementById("collegeid").value.toUpperCase().split(",")
-     var rank = Number(document.getElementById("rank").value);
-     console.log(rank)
+     // var rank = Number(document.getElementById("rank").value);
+     // console.log(rank)
 
      if(branchcodes[0]==""){
           branchcodes = ['TEX', 'IPE', 'DRG', 'CIV', 'CEE', 'ECE', 'EIE', 'PHD', 'ECM', 'AGR', 'INF', 'MNT', 'MET', 'FDS', 'FSP', 'MMT', 'ANE', 'BME', 'PHM', 'CHE', 'MCT', 'MEC', 'AUT', 'ETM', 'PHE', 'FPT', 'MIN', 'EEE', 'BIO', 'PLG', 'DTD', 'CSE'];
@@ -895,7 +895,7 @@ function sortion(){
      var key_1=-1;
      for(i=0;i<830;i++){
 
-               if((val[i][ranks[key]]!=-1 && val[i][ranks[key]]!="NA") && (branchcodes.includes(val[i][6]) && distcodes.includes(val[i][3])) && (instcodes.includes(val[i][0]) && Number(val[i][real[9]]) > Number(rank)) ){
+               if((val[i][ranks[key]]!=-1 && val[i][ranks[key]]!="NA") && (branchcodes.includes(val[i][6]) && distcodes.includes(val[i][3])) && (instcodes.includes(val[i][0]) ){
 
                     let table_row=document.createElement("tr");
                     document.getElementById("tablebody").appendChild(table_row);
