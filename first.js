@@ -887,7 +887,7 @@ function sortion(){
           }
           if(key.split(" ")[1]=="GIRLS"){
           val.sort(Magic);
-     }
+          }
           else{
                val.sort(Magic_1);
           }
@@ -895,31 +895,31 @@ function sortion(){
      var key_1=-1;
      for(i=0;i<830;i++){
 
-               if((val[i][ranks[key]]!=-1 && val[i][ranks[key]]!="NA") && (branchcodes.includes(val[i][6]) && distcodes.includes(val[i][3])) && (instcodes.includes(val[i][0]) ){
+               if(  (val[i][ranks[key]]!=-1 && val[i][ranks[key]]!="NA") && (branchcodes.includes(val[i][6]) && distcodes.includes(val[i][3])) && (instcodes.includes(val[i][0]) && true))
+               {
 
-                    let table_row=document.createElement("tr");
-                    document.getElementById("tablebody").appendChild(table_row);
+                              let table_row=document.createElement("tr");
+                              document.getElementById("tablebody").appendChild(table_row);
 
-                    for(j=0;j<11;j++){
-                         let table_data=document.createElement("td");
-                              if(j!=8){
-                              table_data.textContent=val[i][real[j]];
-                         }
-                         else{
-                              table_data.textContent=caste.value.toUpperCase();
-                         }
-                              table_row.appendChild(table_data);
+                                             for(j=0;j<11;j++){
+                                                  let table_data=document.createElement("td");
+                                                       if(j!=8){
+                                                       table_data.textContent=val[i][real[j]];
+                                                  }
+                                                  else{
+                                                       table_data.textContent=caste.value.toUpperCase();
+                                                  }
+                                                       table_row.appendChild(table_data);
 
-                         }
-                         key_1=0;
-                         console.log(val[i][9])
-                         
+                                                  }}
+                                                  key_1=0;
+                                                  console.log(val[i][9])
+                                                  
                     
                     }
-          }
-    }
     if(key_1==-1){
          alert("No data found according to your formatted input ");
     }
-    console.log(real)
-}
+}}
+
+
