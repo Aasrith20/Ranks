@@ -1,3 +1,8 @@
+#main_tab{
+  /* box-shadow:inset 1px 1px 2px 1px ; */
+  text-shadow:0.01px 0.01px 0.01px;
+
+}
 
 #main{
   display:flex;
@@ -39,7 +44,6 @@
   display:flex;
   flex-direction:row;
   align-items:center;
-
   
 }
 
