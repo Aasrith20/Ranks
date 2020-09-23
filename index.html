@@ -21,20 +21,24 @@
     You can leave fields empty except gender and caste to list everything
         </div>
 
-    <div class="container-fluid" id="tab">
-        <form >
+    <span class="container-fluid" id="tab">
 
-            <label for="Inst Code">Inst Code<br><input id="collegeid" type="text"placeholder="bvri,cbit"></label>
-            <label for="Dist Code">Dist Code<br><input id="place" type="text" placeholder="hyd,nzb"></label>
-            <label for="Branch">Branch Code<br><input id="course"type="text"  placeholder="cse,ece"></label>
-            <label for="Caste">Caste<br><input id="caste" type="text" placeholder="bc-d"></label>
-            <label for="lowest_cutoff">range_min<br><input id="lowest_cutoff" type="text" placeholder="0"></label>
-            <label for="highest_cutoff">range_max<br><input id="highest_cutoff" type="text" placeholder="99999"></label>
-            <label for="Boys" ><input id="boys" type="radio" name="gender" value="Boys">&nbsp;Boy</label>
-            <label for="Girls" ><input  id="girls" type="radio" name="gender" value="Girls">&nbsp;Girl</label>
-        </form>
-        <button onclick="sortion()">Submit</button>
-</div>
+        <form >
+                
+
+                <label for="Inst Code">Inst Code<br><input id="collegeid" type="text"placeholder="bvri,cbit" size="15" ></label>
+                <label for="Dist Code">Dist Code<br><input id="place" type="text" placeholder="hyd,nzb" size="15"></label>
+                <label for="Branch">Branch Code<br><input id="course"type="text"  placeholder="cse,ece" size="15"></label>
+                <label for="Caste">Caste<br><input id="caste" type="text" placeholder="bc-d" size="15"></label>
+                <label for="lowest_cutoff">range_min<br><input id="lowest_cutoff" type="text" placeholder="0" size="15"></label>
+                <label for="highest_cutoff">range_max<br><input id="highest_cutoff" type="text" placeholder="99999" size="15"></label>
+                <label for="Boys" ><input id="boys" type="radio" name="gender" value="Boys" >&nbsp;Boy</label>
+                <label for="Girls" ><input  id="girls" type="radio" name="gender" value="Girls">&nbsp;Girl</label>
+            </form>
+
+    
+            <button onclick="sortion()">Submit</button>
+        </span>
 <div id="main" class="container-fluid">
 <table class="content-table">
     <thead >

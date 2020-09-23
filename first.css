@@ -50,11 +50,10 @@ button{
   box-shadow:0.5px 0.5px 1px 1px rgb(69, 206, 172);;
   border:1px solid rgb(69, 206, 172);;
   /* margin-top:23px; */
-  margin-left:10%;
+  margin-left:15%;
 }
 
 input.text{
-  width:190px;
   box-shadow:1px 1px 1px solid black;
 }
 label{
@@ -69,6 +68,7 @@ label{
 }
 #girls,#boys{
    margin:2px;
+   margin-bottom: 2px;
    margin-left:13px;
    
 }
