@@ -848,7 +848,6 @@ function sortion(){
 
           let caste=document.getElementById("caste")
           key = caste.value.toUpperCase() + " GIRLS";
-          console.log(key)
           real[9] = ranks[key];
      }
      else{
@@ -862,8 +861,12 @@ function sortion(){
      var branchcodes=document.getElementById("course").value.toUpperCase().split(",")
      var distcodes = document.getElementById("place").value.toUpperCase().split(",")
      var instcodes = document.getElementById("collegeid").value.toUpperCase().split(",")
+     var coed_girls= document.getElementById("coed_girls").value.toUpperCase()
      var lowest_cutoff = Number(document.getElementById("lowest_cutoff").value);
      var highest_cutoff = Number(document.getElementById("highest_cutoff").value);
+     if(coed_girls==""){
+          coed_girls=["COED","GIRLS"];
+     }
      if(lowest_cutoff==""){
           lowest_cutoff=0;
      }
@@ -887,7 +890,6 @@ function sortion(){
                let ranks = { "OC BOYS": 8, "OC GIRLS": 9, "BC-A BOYS": 10, "BC-A GIRLS": 11, "BC-B BOYS": 12, "BC-B GIRLS": 13, "BC-C BOYS": 14, "BC-C GIRLS": 15, "BC-D BOYS": 16, "BC-D GIRLS": 17, "BC-E BOYS": 18, "BC-E GIRLS": 19, "SC BOYS": 20, "SC GIRLS": 21, "ST BOYS": 22, "ST GIRLS": 23 };               
                let caste = document.getElementById("caste");
                key = caste.value.toUpperCase() + " GIRLS";
-               console.log(key)
                // console.log(a[ranks[key]], b[ranks[key]], Number(Number(a[ranks[key]] - Number(b[ranks[key]]))))
                return (Number(Number(a[ranks[key]]) - Number(b[ranks[key]])));
           }
@@ -906,10 +908,9 @@ function sortion(){
           }
           let i=0,j=0;
      var key_1=-1;
-     console.log(val)
      for(i=0;i<830;i++){
 
-          if ((val[i][ranks[key]] != -1 && val[i][ranks[key]] != "NA") && (branchcodes.includes(val[i][6]) && distcodes.includes(val[i][3])) && (instcodes.includes(val[i][0])) && (Number(val[i][real[9]]) <= Number(highest_cutoff) && Number(val[i][real[9]]) >= Number(lowest_cutoff))) {
+          if ((val[i][ranks[key]] != -1 && val[i][ranks[key]] != "NA") && (branchcodes.includes(val[i][6]) && distcodes.includes(val[i][3])) && (instcodes.includes(val[i][0])) && (Number(val[i][real[9]]) <= Number(highest_cutoff) && Number(val[i][real[9]]) >= Number(lowest_cutoff)) && (coed_girls.includes(val[i][4]))){
                     // console.log(val[i][real[9]])
                     let table_row=document.createElement("tr");
                     document.getElementById("tablebody").appendChild(table_row);
@@ -932,9 +933,7 @@ function sortion(){
                     }
           }
     }
-    console.log(real)
     if(key_1==-1){
          alert("No data found according to your formatted input ");
     }
-    console.log(real)
 }
