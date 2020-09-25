@@ -93,3 +93,7 @@ a{
 a:hover{
     text-decoration:none;
 }
+
+::placeholder{
+  opacity:0.5;
+}
