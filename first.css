@@ -12,7 +12,7 @@
   /* position:relative; */
   /* background-color: red; */
 }
-.content-table {
+.content-table{
   border-collapse: collapse;
   margin: 25px 0;
   font-size: 0.9em;
@@ -22,29 +22,39 @@
   overflow-x:auto;
 
 }
+.content-table_1 {
+  border-collapse: collapse;
+  margin: 25px 0;
+  font-size: 0.9em;
+  border-radius: 5px 5px 0 0  ;
+  text-align:center;
+  overflow-x:auto;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.05);
 
-.content-table thead  {
+}
+
+.content-table thead ,.content-table_1 thead {
   background-color: rgb(38, 238, 245);
   font-weight: bold;
 
 }
-.content-table tbody tr{
+.content-table tbody tr,.content-table_1 tbody tr{
   background-color: rgb(255, 253, 253);
 }
-.content-table th,.content-table td {
+.content-table th,.content-table td ,.content-table_1 th,.content-table_1 td{
   padding: 12px 15px;
   border-bottom:1px solid black;
 }
 
 
-.content-table  thead tr{
+.content-table  thead tr,.content-table_1  thead tr{
   border-bottom:1px solid black;
 }
 #tab{
   display:flex;
   flex-direction:row;
   align-items:center;
-  
+  /* justify-content:center; */
 }
 
 button{
@@ -54,7 +64,7 @@ button{
   box-shadow:0.5px 0.5px 1px 1px rgb(69, 206, 172);;
   border:1px solid rgb(69, 206, 172);;
   /* margin-top:23px; */
-  margin-left:15%;
+  margin-left:6%;
 }
 
 input.text{
@@ -65,11 +75,17 @@ label{
   margin:2px;
   font-size:0.8em;
 }
- th {
+.content-table th {
  background-color: rgb(69, 206, 172);
   position:sticky;
   top:0;
 }
+.content-table_1 th {
+ background-color: rgb(69, 206, 172);
+  position:sticky;
+  top:30px;
+}
+
 #girls,#boys{
    margin:2px;
    margin-bottom: 2px;
@@ -96,4 +112,14 @@ a:hover{
 
 ::placeholder{
   opacity:0.5;
+}
+#tab_branch{
+  position:sticky;
+  top:0px;
+  background-color:white;
+  height:30px;
+  /* box-shadow:inset 0.1px 0.1px 1px  black */
+}
+body{
+  background-color:white;
 }
