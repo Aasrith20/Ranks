@@ -1,8 +1,11 @@
-#main_tab{
+#home_tab{
   text-shadow:0.01px 0.01px 0.01px;
-
+  background-color:white;
+  position:sticky;
+  top:0;
+  z-index:1;
+  height:30px;
 }
-
 #main{
   display:flex;
   align-items:center;
@@ -12,16 +15,11 @@
   margin: 25px 0;
   font-size: 0.9em;
   border-radius: 5px 5px 0 0  ;
-  box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.05);
   text-align:center;
   overflow-x:auto;
 
 }
-.content-table_1 {
-  box-shadow: 0 0 20px rgba(0, 0, 0, 0.05);
- 
-}
-
 .content-table thead ,.content-table_1 thead {
   background-color: rgb(38, 238, 245);
   font-weight: bold;
@@ -65,12 +63,13 @@ label{
 .content-table th {
  background-color: rgb(69, 206, 172);
   position:sticky;
-  top:0;
+  top:30px;
 }
 .content-table_1 th {
  background-color: rgb(69, 206, 172);
   position:sticky;
   top:30px;
+
 }
 
 #girls,#boys{
