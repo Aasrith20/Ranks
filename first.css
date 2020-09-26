@@ -1,6 +1,6 @@
 #home_tab{
   text-shadow:0.01px 0.01px 0.01px;
-  background-color:yellow;
+  background-color:red;
   display:flex;
   flex-direction:row;
   position:sticky;
