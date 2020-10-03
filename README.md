@@ -1,1 +1,1 @@
-Hosting on https://aasrith20.github.io/Ranks/
+Hosting on https://resolver20.github.io/Ranks/
