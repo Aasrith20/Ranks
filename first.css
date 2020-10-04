@@ -17,7 +17,7 @@
 
 .content-table thead,
 .content-table_1 thead {
-  background-color:  rgb(69, 206, 172);
+  background-color: rgb(69, 206, 172);
   font-weight: bold;
 }
 
@@ -34,8 +34,8 @@
   border-bottom: 1px solid black;
 }
 
-.content-table  thead tr,
-.content-table_1  thead tr {
+.content-table thead tr,
+.content-table_1 thead tr {
   border-bottom: 1px solid black;
 }
 
@@ -58,7 +58,7 @@ input.text {
   box-shadow: 1px 1px 1px solid black;
 }
 
-label{
+label {
   text-align: center;
   margin: 2px;
   font-size: 0.8em;
@@ -67,20 +67,20 @@ label{
 .content-table th {
   background-color: rgb(69, 206, 172);
   position: sticky;
-  top: 0px;
+  top: 0;
 }
 
 .content-table_1 th {
- background-color: rgb(69, 206, 172);
+  background-color: rgb(69, 206, 172);
   position: sticky;
   top: 30px;
 }
 
 #girls,
 #boys {
-   margin: 2px;
-   margin-bottom: 2px;
-   margin-left: 13px;
+  margin: 2px;
+  margin-bottom: 2px;
+  margin-left: 13px;
 }
 
 #help {
@@ -99,7 +99,7 @@ a {
 }
 
 a:hover {
-    text-decoration: none;
+  text-decoration: none;
 }
 
 ::placeholder {
@@ -114,6 +114,6 @@ a:hover {
   z-index: 1;
 }
 
-body{
+body {
   background-color: white;
 }
