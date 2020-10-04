@@ -4,7 +4,7 @@
   align-items: center;
 }
 
-.content-table, .content-table_1 {
+.content-table ,.content-table_1 {
   border-collapse: collapse;
   margin: 25px 0;
   font-size: 0.9em;
@@ -14,21 +14,21 @@
   overflow-x: auto;
 }
 
-.content-table thead, .content-table_1 thead {
+.content-table thead ,.content-table_1 thead {
   background-color:  rgb(69, 206, 172);
   font-weight: bold;
 }
 
-.content-table tbody tr, .content-table_1 tbody tr {
+.content-table tbody tr ,.content-table_1 tbody tr {
   background-color: rgb(255, 253, 253);
 }
 
-.content-table th, .content-table td ,.content-table_1 th, .content-table_1 td {
+.content-table th ,.content-table td ,.content-table_1 th ,.content-table_1 td {
   padding: 12px 15px;
   border-bottom: 1px solid black;
 }
 
-.content-table  thead tr, .content-table_1  thead tr {
+.content-table  thead tr ,.content-table_1  thead tr {
   border-bottom: 1px solid black;
 }
 
@@ -58,7 +58,7 @@ label{
 }
 
 .content-table th {
- background-color: rgb(69, 206, 172);
+  background-color: rgb(69, 206, 172);
   position: sticky;
   top: 0px;
 }
@@ -69,7 +69,7 @@ label{
   top: 30px;
 }
 
-#girls, #boys {
+#girls ,#boys {
    margin: 2px;
    margin-bottom: 2px;
    margin-left: 13px;
