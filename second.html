@@ -18,6 +18,8 @@
         <a href="index.html">Home</a>
         <a href="index.html">2019 First Phase</a>
         <a href="index_1.html">Codes_and_Names</a>
+        <a href="#" onclick="help()">Instructions</a>
+
     </div>
 
     <div class="container-fluid" style="text-align:center;color:rgb(69, 206, 172);font-size:1.0em;">
@@ -69,7 +71,38 @@
 
         </table>
     </div>
-
+        <div class="container-fluid"
+            style=" display: flex; flex-direction: column;justify-content:center;background-color:#e8eaf6;margin-top:20vw;border-top:1px solid black;box-shadow:0 0 20px rgba(0, 0, 0, 0.05);display:none;"
+            id="help">
+            <div class="container-fluid" style="background-color:#e8eaf6;padding-top:0.11em;">
+        
+                <ol style="font-size:0.8em;">
+                    <h6>How To Use:</h6>
+                    <li>Filling out gender and caste is mandatory. </li>
+                    <li>You can leave every field empty (except gender and caste) to list out everything.</li>
+                    <li>You can fill in inst code and leave out rest of fields (except gender and caste) to output everybranch
+                        in that college.</li>
+                    <li>range_min and range_max is where you specify the cutoff range in which you want to list out the cutoffs.
+                    </li>
+                    <li>You can fill all the desired branches you want in the branch_code field (use commas "," to separate them
+                        (cse,inf,ece)) and submit it.</li>
+                    <li>If you have any doubts in branch codes or dist codes or inst codes you can check it out in
+                        Codes_and_Names which is at the Top.</li>
+                    <li>Use a computer for better view.</li>
+                </ol>
+            </div>
+            <div class="container-fluid" style="background-color:#e8eaf6; padding-top:0.11em;">
+        
+                <ol style="font-size:0.8em;">
+                    <h6>Common Mistakes:</h6>
+        
+                    <li>Not opting gender and caste.</li>
+                    <li>Filling inst_code and dist_code which don't match.</li>
+                    <li>Filling multiple caste's.</li>
+                </ol>
+            </div>
+        
+        </div>
     <script src="./second.js"></script>
 
 </body>

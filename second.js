@@ -883,3 +883,13 @@ function sortion(){
          alert("No data found according to your formatted input ");
     }
 }
+function help() {
+     let p = document.getElementById("help");
+     if (p.style.display == "none") {
+          p.style.display = "block";
+     }
+     else {
+          p.style.display = "none";
+     }
+
+}
