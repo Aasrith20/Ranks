@@ -118,12 +118,13 @@ a:hover {
 body {
   background-color: white;
 }
+
 li {
   margin-left:2em;
 }
 
 @media (max-height:500px){
-  a{
+  a {
     font-size: 13px;
   }
 }
