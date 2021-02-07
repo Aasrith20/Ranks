@@ -823,16 +823,22 @@ function sortion(){
      var distcodes = document.getElementById("place").value.toUpperCase().split(",")
      var instcodes = document.getElementById("collegeid").value.toUpperCase().split(",")
      var coed_girls= document.getElementById("coed_girls").value.toUpperCase()
-     var lowest_cutoff = Number(document.getElementById("lowest_cutoff").value);
-     var highest_cutoff = Number(document.getElementById("highest_cutoff").value);
+     var lowest_cutoff = document.getElementById("lowest_cutoff").value;
+     var highest_cutoff = document.getElementById("highest_cutoff").value;
      if(coed_girls==""){
           coed_girls=["COED","GIRLS"];
      }
-     if(lowest_cutoff==""){
-          lowest_cutoff=0;
+     if (lowest_cutoff == "") {
+          lowest_cutoff = 0;
+     }
+     else {
+          lowest_cutoff = Number(lowest_cutoff);
      }
      if (highest_cutoff == "") {
           highest_cutoff = 100000000;
+     }
+     else {
+          highest_cutoff = Number(highest_cutoff);
      }
      // console.log(Number(lowest_cutoff),Number(highest_cutoff))
 
